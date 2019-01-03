@@ -14,6 +14,7 @@ jQuery(function(){
     ko.applyBindings(window.viewModel);
 });*/
 
+/*
 jQuery(function(){
     var viewModelConstructor = function()
     {
@@ -29,4 +30,28 @@ jQuery(function(){
 
     viewModel = new viewModelConstructor;
     ko.applyBindings(viewModel);
+});*/
+
+
+
+jQuery(function(){
+    var viewModelConstructor = function()
+    {
+        this.message = "Hello World";
+    }
+
+    /*var theTemplate = "<h1 data-bind=\"text:message\"></h1>";
+
+    ko.components.register('component-hello-world', {
+        viewModel:viewModelConstructor,
+        template:theTemplate
+    });*/
+
+    ko.bindingHandlers.pulseStormHelloWorld = {
+        update: function(element, valueAccessor){
+            jQuery(element).html('<h1>' + valueAccessor() + '</h1>');
+        }
+    };
+
+    ko.applyBindings(new viewModelConstructor);
 });
