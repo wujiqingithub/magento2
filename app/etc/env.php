@@ -41,7 +41,8 @@ return [
         'config_integration_api' => 1,
         'full_page' => 1,
         'translate' => 1,
-        'config_webservice' => 1
+        'config_webservice' => 1,
+        'compiled_config' => 1
     ],
     'install' => [
         'date' => 'Sun, 26 Aug 2018 14:33:10 +0000'
