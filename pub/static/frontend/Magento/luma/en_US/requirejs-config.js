@@ -742,20 +742,6 @@ require.config(config);
 })();
 (function() {
 var config = {
-    paths:{
-        "addjs":"Pulsestorm_RequireJsTutorial/js/addjs"
-    },
-    shim:{
-        'addjs':{
-            'deps':['jquery']
-        }
-    }
-};
-
-require.config(config);
-})();
-(function() {
-var config = {
     paths: {
         temandoCheckoutFieldsDefinition: 'Temando_Shipping/js/model/fields-definition',
         temandoDeliveryOptions: 'Temando_Shipping/js/model/delivery-options',
